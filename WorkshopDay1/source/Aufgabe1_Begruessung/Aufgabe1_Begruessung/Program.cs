@@ -14,6 +14,7 @@ namespace Aufgabe1_Begruessung
             string geschlecht = "";
             string begruessung = "Hallo";
             bool nochmal = true;
+            nochmal = 5 < 3;
 
             while (nochmal)
             {
