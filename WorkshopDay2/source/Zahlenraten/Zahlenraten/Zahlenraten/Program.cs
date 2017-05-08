@@ -19,10 +19,14 @@ namespace Zahlenraten
             Console.WriteLine("===============");
             Console.WriteLine("\n");
 
-            Console.WriteLine("Geben sie die Minzahl ein");
-            minzahl = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine();
+            //minzahl = Convert.ToInt32(Console.ReadLine());
+
+            minzahl = IntegerFrage("Geben sie die Minzahl ein");            
+
             Console.WriteLine("Geben sie die Maxzahl ein");
             maxzahl = Convert.ToInt32(Console.ReadLine());
+
             Console.Clear();
             Random rnd = new Random();
             zufallszahl = rnd.Next(minzahl, maxzahl);
@@ -39,8 +43,8 @@ namespace Zahlenraten
                 }
                 else
                 {
-                    Console.WriteLine("Leider falsch. Wollen Sie noch einmal?(y)");
-                    if (Console.ReadLine() == "y")
+                    //Console.WriteLine("Leider falsch. Wollen Sie noch einmal?(y)");
+                    if (StringFrage("Leider falsch. Wollen Sie noch einmal?(y)") == "y")
                     {
                         nochmal = true;
                         if (zufallszahl < ratezahl)
@@ -60,6 +64,20 @@ namespace Zahlenraten
             }
             Console.WriteLine("Das Programm wurde beendet. Bis zum nächsten mal.");
             Console.ReadKey();
+        }
+
+        private static int IntegerFrage(string p_Frage)
+        {
+            Console.WriteLine(p_Frage);
+            int ergebnis = Convert.ToInt32(Console.ReadLine());
+            return ergebnis;
+        }
+
+        private static string StringFrage(string p_Frage)
+        {
+            Console.WriteLine(p_Frage);
+            string ergebnis = Console.ReadLine();
+            return ergebnis;
         }
 
     }
