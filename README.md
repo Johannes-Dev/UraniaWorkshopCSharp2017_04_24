@@ -2,10 +2,14 @@
 
 Unterlagen für den Workshop "Einführung in die Programmierung mit C # (Sharp)"
 
-Termine:
+Termine: 
 
 24.04.2017, 19:00Uhr
+
 08.05.2017, 19:00Uhr
+
 15.05.2017, 19:00Uhr
+
 22.05.2017, 19:00Uhr
+
 29.05.2017, 19:00Uhr
