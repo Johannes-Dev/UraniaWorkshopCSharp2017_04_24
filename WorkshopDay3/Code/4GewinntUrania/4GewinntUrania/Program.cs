@@ -10,10 +10,10 @@ namespace _4GewinntUrania
     {
         static void Main(string[] args)
         {
-            var feld = new int[5, 7];
+            var feld = new char[5, 7];
             IniFeld(feld);
             bool spielZuende = false;
-            int spieler = 1;
+            char spieler = 'r';//welcher spieler ist am zug
 
             do
             {
@@ -29,13 +29,13 @@ namespace _4GewinntUrania
                     Console.WriteLine("Spieler" + spieler + " gewinnt :)");
                 }
 
-                if (spieler==1)
+                if (spieler=='r')
                 {
-                    spieler = 2;
+                    spieler = 'g';
                 }
                 else
                 {
-                    spieler = 1;
+                    spieler = 'r';
                 }
 
             } while (!spielZuende);
@@ -43,10 +43,10 @@ namespace _4GewinntUrania
 
             Console.ReadKey();
         }
-        private static bool IstSpielGewonnen (int[,] feld,int spieler)
+        private static bool IstSpielGewonnen (char[,] feld,char spieler)
         {
             //treffer in spalte
-
+            
             int treffer = 0;
 
             for (int i = 0; i < 5; i++)
@@ -94,11 +94,11 @@ namespace _4GewinntUrania
             return false;
         }
 
-        private static void SetzeStein(int[,] feld, int spalte, int Spieler)
+        private static void SetzeStein(char[,] feld, int spalte, char Spieler)
         {
             for (int i = 4; i >= 0; i--)
             {
-                if(feld[i,spalte]==0)
+                if(feld[i,spalte]=='w')
                 {
                     feld[i, spalte] = Spieler;
                     break;
@@ -107,18 +107,21 @@ namespace _4GewinntUrania
             //ToDoException
         }
 
-        private static void IniFeld(int[,] feld)
+
+
+
+        private static void IniFeld(char[,] feld)
         {
             for (int i = 0; i < 5; i++)
             {
                 for (int j = 0; j < 7; j++)
                 {
-                    feld[i, j] = 0;
+                    feld[i, j] = 'w';
                 }
             }
         }
 
-        private static void ZeichneFeld(int[,] feld)
+        private static void ZeichneFeld(char[,] feld)
         {
             for (int i = 0; i < 5; i++)
             {
