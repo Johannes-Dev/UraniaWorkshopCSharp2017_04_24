@@ -49,13 +49,14 @@ namespace TaschenrechnerPlusMinus
             if (!int.TryParse(textBoxZahl1.Text,out zahl1))
             {
                 MessageBox.Show("Die Eingabe der Ersten Zahl war nicht valide.");
+                return;
             }
             
             if (!int.TryParse(textBoxZahl2.Text, out zahl2))
             {
                 MessageBox.Show("Die Eingabe der Zweiten Zahl war nicht valide.");
+                return;
             }
-
 
             if (buttonPlus.BackColor==Color.Green)
             {
