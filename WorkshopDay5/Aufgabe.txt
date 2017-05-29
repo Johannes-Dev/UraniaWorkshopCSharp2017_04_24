@@ -1,0 +1,9 @@
+-Bauen einer Form
+-Oberfläöche anpassen (Name, Nachname, Geburtsdatum)
+- Button Add
+
+-Anlegen einer Klasse Person (Name, Nachname, Geburtsdatum
+-Speichern in einem array neue Personen
+
+
+PersonenVerwaltung
